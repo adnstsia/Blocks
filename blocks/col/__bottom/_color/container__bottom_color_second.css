@@ -1,0 +1,7 @@
+.container__bottom_color_second {
+  background-color: rgba(219, 246, 198, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

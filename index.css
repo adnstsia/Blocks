@@ -1,0 +1,24 @@
+/* Стили класса page */
+@import url(blocks/page/page.css);
+
+/* Cтили блока container */
+@import url(blocks/container/container.css);
+@import url(blocks/container/__bottom/container__bottom.css);
+@import url(blocks/container/__center/container__center.css);
+@import url(blocks/container/__top/container__top.css);
+
+/* Cтили блока col */
+@import url(blocks/col/col.css);
+/* Cтили блока верхнего блока col */
+@import url(blocks/col/__top/col__top.css);
+/* Cтили блока центрального блока col */
+@import url(blocks/col/__center/col__center.css);
+@import url(blocks/col/__center/_color/col__center_color_first.css);
+@import url(blocks/col/__center/_color/col__center_color_second.css);
+@import url(blocks/col/__center/_color/col__center_color_third.css);
+/* Cтили блока нижнего блока col */
+@import url(blocks/col/__bottom/col__bottom.css);
+@import url(blocks/col/__bottom/_color/container__bottom_color_first.css);
+@import url(blocks/col/__bottom/_color/container__bottom_color_second.css);
+
+
