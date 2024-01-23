@@ -1,24 +1,78 @@
-/* Стили класса page */
-@import url(blocks/page/page.css);
+.page {
+  margin: 0 auto; /* Устанавливаем внешние отступы сверху и снизу в 0, а по бокам автоматически выравниваем по центру */
+  text-rendering: optimizeLegibility; /* Оптимизация отображения текста для улучшения читаемости */
+  -webkit-font-smoothing: antialiased; /* Улучшение сглаживания шрифтов в веб-браузерах с поддержкой -webkit (Chrome, Safari) */
+  -moz-osx-font-smoothing: grayscale; /* Улучшение сглаживания шрифтов в веб-браузерах с поддержкой -moz (Firefox) */
+  -webkit-text-size-adjust: 100%; /* Управление размером текста для браузеров на базе WebKit (Chrome, Safari) */
+  -ms-text-size-adjust: 100%; /* Управление размером текста для браузеров Internet Explorer */
+  -moz-text-size-adjust: 100%; /* Управление размером текста для браузеров на базе Gecko (Firefox) */
+  min-height: 100vh; /* Задание минимальной высоты равной 100% высоты видимой области (viewport height) */
+  display: flex; /* Установка блока в режиме flex-контейнера с направлением колонки (сверху вниз) */
+  flex-direction: column; /* Установка блока в режиме flex-контейнера с направлением колонки (сверху вниз) */
+  font-family: "Inter", "Helvatica", sans-serif; /* Задание шрифта для текста, предпочтительно начиная с 'Inter', и в случае его отсутствия - 'Helvetica', а затем - шрифты без засечек (sans-serif) */
+}
 
-/* Cтили блока container */
-@import url(blocks/container/container.css);
-@import url(blocks/container/__bottom/container__bottom.css);
-@import url(blocks/container/__center/container__center.css);
-@import url(blocks/container/__top/container__top.css);
+.container {
+  margin: 0;
+  padding: 0;
+  height: 33.33vh;
+  min-width: 100%;
+  display: flex;
+}
 
-/* Cтили блока col */
-@import url(blocks/col/col.css);
-/* Cтили блока верхнего блока col */
-@import url(blocks/col/__top/col__top.css);
-/* Cтили блока центрального блока col */
-@import url(blocks/col/__center/col__center.css);
-@import url(blocks/col/__center/_color/col__center_color_first.css);
-@import url(blocks/col/__center/_color/col__center_color_second.css);
-@import url(blocks/col/__center/_color/col__center_color_third.css);
-/* Cтили блока нижнего блока col */
-@import url(blocks/col/__bottom/col__bottom.css);
-@import url(blocks/col/__bottom/_color/container__bottom_color_first.css);
-@import url(blocks/col/__bottom/_color/container__bottom_color_second.css);
+@media screen and (max-width: 352px) {
+  .container {
+    flex-direction: column;
+  }
+}
 
+.container__bottom_color_first {
+  background-color: rgba(250, 251, 196, 1);
+  max-width: 33.33vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
+@media screen and (max-width: 352px) {
+  .container__bottom_color_first {
+    min-width: 100%;
+  }
+}
+
+.container__bottom_color_second {
+  background-color: rgba(219, 246, 198, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.col {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+}
+
+.col__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col__center_color_first {
+  background-color: rgba(25, 135, 84);
+}
+
+.col__center_color_second {
+  background-color: rgba(232, 240, 140, 1);
+  border: 1px dashed #000;
+}
+
+.col__center_color_third {
+  background-color: rgba(255, 193, 7);
+}
